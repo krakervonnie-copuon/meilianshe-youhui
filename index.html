@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="zh-TW">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>十月好禮開啟領取</title>
+<meta property="og:title" content="十月好禮開啟領取">
+<meta property="og:description" content="美廉社 Simple Mart 十月好禮開啟領取，滿額現折優惠立即領">
+<meta property="og:image" content="coupon.png">
+<meta property="og:type" content="website">
+<meta name="twitter:card" content="summary_large_image">
+<style>
+body{margin:0;background:#faf7fb;font-family:-apple-system,BlinkMacSystemFont,'Noto Sans TC',sans-serif}
+.wrap{max-width:720px;margin:0 auto;padding:16px}
+.img{width:100%;border-radius:16px;box-shadow:0 8px 24px rgba(0,0,0,.12);display:block;margin:16px 0}
+.btn{display:block;margin:20px auto 0;background:#8B2477;color:#fff;border:0;border-radius:999px;padding:0 32px;height:48px;font-weight:900;font-size:18px;cursor:pointer}
+.btn:disabled{opacity:.6}
+.card{background:#fff;border-radius:16px;padding:16px;margin:12px 0;box-shadow:0 4px 12px rgba(0,0,0,.08)}
+.grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+@media(max-width:600px){.grid{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<div class="wrap">
+<img class="img" src="banner.png" alt="美廉社">
+<img class="img" src="coupon.png" alt="滿200折169">
+<button class="btn" id="claim">立即領取</button>
+<div class="grid" style="margin-top:24px">
+<div class="card"><b>天天</b><br>滿150送15 (上限30)</div>
+<div class="card"><b>銀行優惠</b><br>國泰/中信 AMEX 滿888折100</div>
+<div class="card"><b>週日</b><br>LINE Pay 10% 回饋 上限50</div>
+</div>
+</div>
+<script>
+document.getElementById('claim').onclick=function(){
+  var b=this;
+  b.textContent='已領取 ✓';
+  b.disabled=true;
+  window.open('https://lin.ee/pCpD1z3','_blank');
+  setTimeout(function(){location.href='https://lin.ee/pCpD1z3';},300);
+};
+</script>
+</body>
+</html>
